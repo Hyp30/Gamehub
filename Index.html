@@ -4,115 +4,246 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMEHUB</title>
+<title>GAMEHUB - Games & Apps</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
- margin: 0;
- background: #10121b;
- color: white;
- font-family: Arial, sans-serif;
+  background: #0b0e17;
+  color: white;
+  font-family: Arial, sans-serif;
 }
+
 header {
- background: #191d2b;
- padding: 20px;
- text-align: center;
+  background: #141a29;
+  padding: 22px 15px;
+  text-align: center;
+  border-bottom: 1px solid #252e43;
 }
-header h1 { color: #00d4ff; }
+
+header h1 {
+  color: #00cfff;
+  font-size: 30px;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 8px;
+}
+
 nav {
- background: #22283a;
- padding: 15px;
- text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 16px 5px;
+  background: #111726;
 }
+
 nav a {
- color: white;
- text-decoration: none;
- margin: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
 }
+
+nav a:hover {
+  color: #00cfff;
+}
+
 .hero {
- text-align: center;
- padding: 60px 15px;
+  text-align: center;
+  padding: 65px 15px;
+  background: linear-gradient(135deg,#101c35,#17102c);
 }
-.hero h2 { font-size: 30px; }
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #bbb;
+  margin-bottom: 25px;
+}
+
 .search {
- padding: 12px;
- width: 90%;
- max-width: 350px;
- border-radius: 8px;
- border: none;
+  width: 90%;
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #303b55;
+  background: #202a3d;
+  color: white;
+  outline: none;
 }
-.section { padding: 20px; }
+
+.section {
+  padding: 30px 18px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 22px;
+  color: #00cfff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+
 .game {
- background: #202638;
- padding: 20px;
- border-radius: 12px;
- margin-bottom: 15px;
+  background: #171e2e;
+  padding: 18px;
+  border: 1px solid #29344b;
+  border-radius: 12px;
+  transition: 0.3s;
 }
-.game h3 { color: #00d4ff; }
+
+.game:hover {
+  transform: translateY(-5px);
+  border-color: #00cfff;
+}
+
+.cover {
+  height: 130px;
+  background: linear-gradient(135deg,#173c70,#552c79);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.game h3 {
+  margin-bottom: 10px;
+}
+
+.game p {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
 .download {
- display: inline-block;
- background: #00b894;
- color: white;
- padding: 10px 18px;
- border-radius: 6px;
- text-decoration: none;
+  display: inline-block;
+  padding: 11px 18px;
+  background: #00b894;
+  color: white;
+  border-radius: 7px;
+  text-decoration: none;
 }
+
+.download:hover {
+  background: #009b7d;
+}
+
 footer {
- background: #191d2b;
- text-align: center;
- padding: 20px;
- color: #aaa;
+  text-align: center;
+  background: #141a29;
+  padding: 25px;
+  color: #888;
+  margin-top: 35px;
 }
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>🎮 GAMEHUB</h1>
-<p>Games & Apps Download Center</p>
+<p>Your World of Games & Apps</p>
 </header>
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Games</a>
-<a href="#">Apps</a>
-<a href="#">About</a>
+<a href="#games">Games</a>
+<a href="#apps">Apps</a>
+<a href="#about">About</a>
 </nav>
 
 <div class="hero">
 <h2>WELCOME TO GAMEHUB</h2>
-<p>Discover your favorite games and apps.</p>
-<input class="search" type="text"
-placeholder="Search games and apps...">
+<p>Discover, Explore and Download Your Favorite Games.</p>
+<input class="search" id="search"
+type="text" placeholder="Search games and apps...">
 </div>
 
-<div class="section">
-<h2>🔥 Featured Games</h2>
+<section class="section" id="games">
+<h2>🔥 Popular Games</h2>
+
+<div class="cards">
 
 <div class="game">
-<h3>Featured Game 1</h3>
-<p>Coming soon...</p>
+<div class="cover">🏎️</div>
+<h3>Racing Games</h3>
+<p>Discover exciting racing games.</p>
 <a href="#" class="download">Download</a>
 </div>
 
 <div class="game">
-<h3>Featured Game 2</h3>
-<p>Coming soon...</p>
+<div class="cover">⚽</div>
+<h3>Football Games</h3>
+<p>Explore your favorite football games.</p>
 <a href="#" class="download">Download</a>
 </div>
-
-<h2>📱 Featured Apps</h2>
 
 <div class="game">
-<h3>Featured App 1</h3>
-<p>Coming soon...</p>
+<div class="cover">🎯</div>
+<h3>Action Games</h3>
+<p>Explore exciting action adventures.</p>
 <a href="#" class="download">Download</a>
 </div>
+
 </div>
+</section>
+
+<section class="section" id="apps">
+<h2>📱 Popular Apps</h2>
+
+<div class="cards">
+
+<div class="game">
+<div class="cover">📲</div>
+<h3>Android Apps</h3>
+<p>Discover useful Android applications.</p>
+<a href="#" class="download">Download</a>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About GAMEHUB</h2>
+<p>GAMEHUB is your destination for discovering
+games and applications.</p>
+</section>
 
 <footer>
 <p>© 2026 GAMEHUB. All Rights Reserved.</p>
 </footer>
+
+<script>
+const search = document.getElementById("search");
+const games = document.querySelectorAll(".game");
+
+search.addEventListener("input", function() {
+  const value = search.value.toLowerCase();
+
+  games.forEach(function(game) {
+    game.style.display =
+      game.innerText.toLowerCase().includes(value)
+      ? "block" : "none";
+  });
+});
+</script>
 
 </body>
 </html>
